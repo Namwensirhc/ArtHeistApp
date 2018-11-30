@@ -1,7 +1,7 @@
-package com.finalproject.ArtHeistApp.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface Heister extends JpaRepository {
-
-}
+//package com.finalproject.ArtHeistApp.repository;
+//
+//import org.springframework.data.jpa.repository.JpaRepository;
+//
+//public interface Heister extends JpaRepository {
+//
+//}

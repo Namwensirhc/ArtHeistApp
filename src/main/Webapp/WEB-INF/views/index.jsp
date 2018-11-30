@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<a href="shopperResults">Click here, please.</a>
+${artworks}
 
 </body>
 </html>

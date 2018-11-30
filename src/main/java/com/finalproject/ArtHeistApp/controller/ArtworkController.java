@@ -2,28 +2,26 @@ package com.finalproject.ArtHeistApp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.finalproject.ArtHeistApp.entities.Artworks;
 
 @Controller
 public class ArtworkController {
 	
-	@RequestMapping("/") //Not sure if this is needed in all controllers?
-	public ModelAndView index() {
-		return new ModelAndView("index");
-	}
 
-	@RequestMapping("/artDetails")
-	public ModelAndView showartDetails() { //Is showartDetails valid? is it just artDetails?
-		return new ModelAndView("artDetails");
-	
-}
-	@RequestMapping("artWorkList")
-	public ModelAndView artWorkList() {
-		return new ModelAndView("artWorkList");
-	}
 	@RequestMapping("shopperResults")
 	public ModelAndView shopperResults() {
-		return new ModelAndView("shopperResults");
+		
+		// Create the RestTemplate
+		RestTemplate rt = new RestTemplate();
+		
+		Artworks art = rt.getForObject("https://collectionapi.metmuseum.org/public/collection/v1/objects/222", Artworks.class);
+		
+		
+		
+		return new ModelAndView("results", "artworks", art);
 	}
 	
 	
