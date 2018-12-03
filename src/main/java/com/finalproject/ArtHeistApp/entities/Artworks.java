@@ -7,7 +7,7 @@ public class Artworks {
 
 	private Integer objectID;
 	private String title;
-	private Integer objectEndDate;
+	private String objectEndDate;
 	private String dimensions;
 	private String primaryImage;
 	private String artistDisplayName;
@@ -17,7 +17,7 @@ public class Artworks {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Artworks(Integer objectID, String title, Integer objectEndDate, String dimensions, String primaryImage,
+	public Artworks(Integer objectID, String title, String objectEndDate, String dimensions, String primaryImage,
 			String artistDisplayName) {
 		super();
 		this.objectID = objectID;
@@ -44,16 +44,24 @@ public class Artworks {
 		this.title = title;
 	}
 
-	public Integer getObjectEndDate() {
+	public String getObjectEndDate() {
 		return objectEndDate;
 	}
 
-	public void setObjectEndDate(Integer objectEndDate) {
+	public void setObjectEndDate(String objectEndDate) {
 		this.objectEndDate = objectEndDate;
 	}
 
 	public String getDimensions() {
 		return dimensions;
+	}
+
+	public String getArtistDisplayName() {
+		return artistDisplayName;
+	}
+
+	public void setArtistDisplayName(String artistDisplayName) {
+		this.artistDisplayName = artistDisplayName;
 	}
 
 	public void setDimensions(String dimensions) {
@@ -71,7 +79,7 @@ public class Artworks {
 	@Override
 	public String toString() {
 		return "Artworks [objectID=" + objectID + ", title=" + title + ", artistDisplayName=" + artistDisplayName
-				+ ", dimensions=" + dimensions + ", primaryImage=" + primaryImage + ", ]";
+				+ ", dimensions=" + dimensions + ", objectEndDate=" + objectEndDate +",  primaryImage=" + primaryImage + ", ]";
 	}
 
 }

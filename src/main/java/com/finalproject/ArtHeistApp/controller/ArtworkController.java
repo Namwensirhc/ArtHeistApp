@@ -17,7 +17,7 @@ public class ArtworkController {
 		// Create the RestTemplate
 		RestTemplate rt = new RestTemplate();
 		
-		Artworks art = rt.getForObject("https://collectionapi.metmuseum.org/public/collection/v1/objects/222", Artworks.class);
+		Artworks art = rt.getForObject("https://collectionapi.metmuseum.org/public/collection/v1/objects/4117", Artworks.class);
 		
 		
 		
