@@ -6,12 +6,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HeistController {
+	
 
-	@RequestMapping("jobList")
-	public ModelAndView jobList() {
-		return new ModelAndView("jobList");
+	@RequestMapping("heistJobList")
+	public ModelAndView heistJobList() {
+		return new ModelAndView("heistJobList");
 	}
-	@RequestMapping("heisterAdmin")
+	@RequestMapping("heisterResults")
+	public ModelAndView heisterResults() {
+		return new ModelAndView("heisterResults");
+	}
+	
+	@RequestMapping("heisterAdmin") //For us on the backend only, where heist info submits too
 	public ModelAndView heisterAdmin() {
 		return new ModelAndView("heisterAdmin");
 	}
