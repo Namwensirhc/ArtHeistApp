@@ -1,19 +1,11 @@
 package com.finalproject.ArtHeistApp.controller;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.finalproject.ArtHeistApp.entities.ArtworkResults;
-import com.finalproject.ArtHeistApp.entities.Artworks;
 
 @Controller
 public class ArtworkController {
@@ -49,6 +41,7 @@ public class ArtworkController {
 			) {
 		RestTemplate rT = new RestTemplate();
 		ArtworkResults art = rT.getForObject("https://collectionapi.metmuseum.org/public/collection/v1/objects/", ArtworkResults.class);
+	
 		
 		
 //		ResponseEntity<ArtworkResults> response = rT.exchange(

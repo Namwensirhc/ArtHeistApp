@@ -1,11 +1,11 @@
 package com.finalproject.ArtHeistApp.entities;
 
 
-import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown= true)
+
 public class ArtworkResults {
 //	@Id
 	private int total;
