@@ -7,34 +7,37 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown= true)
 
 public class ArtworkResults {
-//	@Id
-	private int total;
-	private int objectIDs[];
-	
+
+	private Integer total;
+	private Integer[] objectIDs;
+
 	public ArtworkResults() {
-		super();
+
 	}
 
-	public int getTotal() {
+	public ArtworkResults(Integer total, Integer[] objectIDs) {
+		this.total = total;
+		this.objectIDs = objectIDs;
+	}
+
+	public Integer getTotal() {
 		return total;
 	}
 
-	public void setTotal(int total) {
+	public void setTotal(Integer total) {
 		this.total = total;
 	}
 
-	public int[] getObjectIDs() {
+	public Integer[] getObjectIDs() {
 		return objectIDs;
 	}
 
-	public void setObjectIDs(int[] objectIDs) {
+	public void setObjectIDs(Integer[] objectIDs) {
 		this.objectIDs = objectIDs;
 	}
-	
-	
-	
-	
-	
 
-
+	@Override
+	public String toString() {
+		return "Artworks [total=" + total + ", objectIDs=" + objectIDs + "]";
+	}
 }
