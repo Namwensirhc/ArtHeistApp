@@ -11,11 +11,14 @@ public class ShopperController {
 	@RequestMapping("shopper")
 	public ModelAndView Shopper() {
 		return new ModelAndView("shopper");
-	
 	}
 	
 	@RequestMapping("results") //if heister accepted/completed job? Art is already listed in another job
 	public ModelAndView results() {
 		return new ModelAndView("results");
+	}
+	@RequestMapping("error")
+	public ModelAndView error() {
+		return new ModelAndView("error");
 	}
 }
