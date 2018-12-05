@@ -17,8 +17,9 @@ public class ShopperController {
 	public ModelAndView results() {
 		return new ModelAndView("results");
 	}
-	@RequestMapping("error")
-	public ModelAndView error() {
-		return new ModelAndView("error");
+	@RequestMapping("error404") //connected to error page but have to goto manually
+	public ModelAndView error404() {
+		return new ModelAndView("error404");
 	}
+	//create redirect that bring up error page if info is entered wrong?
 }
